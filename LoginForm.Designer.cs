@@ -48,7 +48,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(78)))), ((int)(((byte)(165)))));
             this.label6.Location = new System.Drawing.Point(99, 398);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 17);
+            this.label6.Size = new System.Drawing.Size(113, 16);
             this.label6.TabIndex = 19;
             this.label6.Text = "Create Account";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -58,7 +58,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(67, 372);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 17);
+            this.label5.Size = new System.Drawing.Size(161, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "Dont Have an Account";
             // 
@@ -99,7 +99,7 @@
             this.checkboxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkboxShowPass.Location = new System.Drawing.Point(134, 230);
             this.checkboxShowPass.Name = "checkboxShowPass";
-            this.checkboxShowPass.Size = new System.Drawing.Size(119, 21);
+            this.checkboxShowPass.Size = new System.Drawing.Size(133, 20);
             this.checkboxShowPass.TabIndex = 2;
             this.checkboxShowPass.Text = "Show Password";
             this.checkboxShowPass.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(134, 285);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 21);
+            this.checkBox1.Size = new System.Drawing.Size(136, 20);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Password";
             // 
@@ -134,13 +134,14 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(218, 28);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Username";
             // 
@@ -169,7 +170,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(289, 489);
@@ -185,7 +186,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

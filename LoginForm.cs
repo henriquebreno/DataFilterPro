@@ -17,9 +17,7 @@ namespace Login_and_Register_System
         {
             InitializeComponent();
         }
-        NpgsqlConnection conn = new NpgsqlConnection(ConfigurationManager.AppSettings.Get("MyConnection"));
-        NpgsqlCommand cmd = new NpgsqlCommand();
-        NpgsqlDataAdapter da = new NpgsqlDataAdapter();
+
         private void label6_Click(object sender, EventArgs e)
         {
             new frmRegister().Show();
@@ -35,34 +33,10 @@ namespace Login_and_Register_System
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-            if (conn != null && conn.State == ConnectionState.Open)
-            {
-                conn.Close();
-            }
-            conn.Open();
-            string login = ("SELECT * FROM csharp_user WHERE username =  '" + txtUsername.Text +"' and password = '"+txtPassword.Text+"' ");
-            cmd = new NpgsqlCommand(login, conn);
-            NpgsqlDataReader dr = cmd.ExecuteReader();
+           
            
 
-            if (dr.Read() == true)
-            {
-                conn.Close();
-                new Dashboard().Show();
-                Dashboard.instance.lbl.Text = txtUsername.Text;
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Credentials, please try Again.","Login Failed", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtUsername.Focus();
-                if (conn != null && conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-            }
+            
         }
 
         private void checkboxShowPass_CheckedChanged(object sender, EventArgs e)
@@ -76,6 +50,11 @@ namespace Login_and_Register_System
                 txtPassword.PasswordChar = '*';
 
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
